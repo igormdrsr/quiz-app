@@ -1,0 +1,45 @@
+li.input-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+li.input-wrapper input {
+  appearance: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #9aa0a6;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li.input-wrapper input:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  transform: scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+li.input-wrapper input:checked {
+  border-color: var(--primary-color);
+}
+
+li.input-wrapper input:checked+label {
+  color: var(--primary-color);
+}
+
+li.input-wrapper input:checked::before {
+  transform: scale(1);
+}
+
+li.input-wrapper label {
+  cursor: pointer;
+  font-size: 24px;
+  margin-left: 8px;
+}
